@@ -1,15 +1,9 @@
-This project is an Android Development Kit for accessing the ImmobilienScout24 REST API. The purpose of this
- project is to enable developers to easily use the ImmobilienScout24 REST API without having to care about the
- specifics of OAuth or how to structure requests against the API. The SDK is an open source project driven by
- ImmobilienScout24 and the community.
+This project is an Android Development Kit for accessing the ImmobilienScout24 REST API. The purpose of this project is to enable developers to easily use the ImmobilienScout24 REST API without having to care about the specifics of OAuth or how to structure requests against the API. The SDK is an open source project driven by ImmobilienScout24 and the community.
 
 ------------------------- 
 The SDK Library 
 
-The base of the SDK project is the SDK library itself. The Android project is implemented as a library project.
- This provides the advantage of referencing the library in several projects whithin your workspace. Unlike a normal
- jar package, a library project also packages all its resources into the final application which is using it. This
- simplifies the usage of the attributes of the domain objects in your own application.
+The base of the SDK project is the SDK library itself. The Android project is implemented as a library project. This provides the advantage of referencing the library in several projects whithin your workspace. Unlike a normal jar package, a library project also packages all its resources into the final application which is using it. This simplifies the usage of the attributes of the domain objects in your own application.
  
 Current supported features:
 * Two Legged OAuth implementation
@@ -18,24 +12,18 @@ Current supported features:
 * Expose Service for specific RealEstate requests
 * Expose Response translation into domain object
  
-After you have imported the SDK library project into your Eclipse workspace you can link it to your own application
- in the following way:
+After you have imported the SDK library project into your Eclipse workspace you can link it to your own application in the following way:
  
 -> Right click on your project
 -> select Properties
 -> in the dialog menu select the Android node
 -> in the library area on the bottom right you can add a reference to the library project.
   
-The usage of the SDK is straight forward. Before you can use any of the services the SDK provides you'll have to
- initialize some basic components in your code. First you'll have to provide the ApplicationContext to the
- LibraryContext class so that the library is able to make resource lookups for texts and urls.
+The usage of the SDK is straight forward. Before you can use any of the services the SDK provides you'll have to initialize some basic components in your code. First you'll have to provide the ApplicationContext to the LibraryContext class so that the library is able to make resource lookups for texts and urls.
  
 LibraryContext.getInstance().initApplicationContext(getApplicationContext());
 
-The next thing you'll have to do is to initialize the HttpRequestExecuter with your consumer-key and your
- consumer-secret which you received when you registered for using the ImmobilienScout24 REST API. It is responsible for
- signing the requests which are directed to the API with your OAuth credentials. The init2LeggedOauth method also takes
- a flag specifying if the requests should be fired against the sandbox or the live system.
+The next thing you'll have to do is to initialize the HttpRequestExecuter with your consumer-key and your consumer-secret which you received when you registered for using the ImmobilienScout24 REST API. It is responsible for signing the requests which are directed to the API with your OAuth credentials. The init2LeggedOauth method also takes a flag specifying if the requests should be fired against the sandbox or the live system.
  
 HttpRequestExecuter.getInstance().init2LeggedOauth(
       "consumer-key", "consumer-secret", isLiveUrl);
@@ -44,23 +32,17 @@ When you initialized both components you can easily use the services by calling 
 
 ExposeService.getInstance().getExpose("realEstateId");
 
-The services are implemented as singletons and should always be called asynchronously (use AsyncTask, Handler, Thread).
-Internally the services parse the response from the API and return the corresponding domain objects.
+The services are implemented as singletons and should always be called asynchronously (use AsyncTask, Handler, Thread). Internally the services parse the response from the API and return the corresponding domain objects.
 
 -------------------------
 The SDK Reference Implementation
 
-To give an example of how to use the SDK, a simple reference application is provided. The reference application utilizes
- the SDK to submit a defined RealEstate search. The search results are displayed in a simple listview. When the user
- clicks on one of the results in that list an expose request is done for that specific expose. The returned result
- expose is displayed in another activity showing some of its attributes.
+To give an example of how to use the SDK, a simple reference application is provided. The reference application utilizes the SDK to submit a defined RealEstate search. The search results are displayed in a simple listview. When the user clicks on one of the results in that list an expose request is done for that specific expose. The returned result expose is displayed in another activity showing some of its attributes.
  
 -------------------------
 The SDK Test
 
-To verify that the SDK is working and that changes didn't break the functionality a SDK test project is provided.
- This test project can't test the SDK library directly as no APK is generated from it. It tests SDK classes through the
- reference project.  
+To verify that the SDK is working and that changes didn't break the functionality a SDK test project is provided. This test project can't test the SDK library directly as no APK is generated from it. It tests SDK classes through the reference project.  
 
  
   
