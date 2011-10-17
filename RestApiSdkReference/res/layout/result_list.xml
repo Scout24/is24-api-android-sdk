@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:gravity="center">
+	<ListView android:id="@+id/resultList" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:cacheColorHint="#000000" android:visibility="gone"/>
+	<ProgressBar android:layout_width="50dp"
+		android:layout_height="50dp" android:id="@+id/progress"
+		android:layout_gravity="center" android:indeterminate="true"
+		android:indeterminateBehavior="cycle" android:indeterminateOnly="true" />
+</LinearLayout>

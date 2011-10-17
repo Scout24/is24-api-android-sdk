@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<TextView android:text="Koordinaten: Lat - Long" android:id="@+id/coordinatesTextView"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/linearLayoutCoordinates">
+			<EditText android:id="@+id/coordinatesLat" android:text="52.51246"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:hint="Koordinate Lat" android:layout_weight="0.5"
+				android:inputType="numberDecimal" android:imeOptions="actionDone"></EditText>
+			<EditText android:id="@+id/coordinatesLong" android:text="13.431194"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:hint="Koordinate Long" android:layout_weight="0.5"
+				android:inputType="numberDecimal" android:imeOptions="actionDone"></EditText>
+		</LinearLayout>
+		<TextView android:text="Radius: 1km" android:id="@+id/radiusSeekBarTextView"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<SeekBar android:layout_height="wrap_content" android:id="@+id/radiusSeekBar"
+			android:layout_width="fill_parent" android:max="6"></SeekBar>
+		<TextView android:text="Angebotstyp:" android:id="@+id/priceTextView"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<RadioGroup android:layout_height="wrap_content"
+			android:id="@+id/radioGroupRealEstateType" android:layout_width="fill_parent">
+			<RadioButton android:layout_width="wrap_content"
+				android:id="@+id/radioFlat" android:layout_height="wrap_content"
+				android:text="Wohnung" android:checked="true"></RadioButton>
+			<RadioButton android:layout_width="wrap_content"
+				android:id="@+id/radioHouse" android:layout_height="wrap_content"
+				android:text="Haus"></RadioButton>
+			<RadioButton android:layout_width="wrap_content"
+				android:id="@+id/radioSite" android:layout_height="wrap_content"
+				android:text="Grundstück"></RadioButton>
+		</RadioGroup>
+		<TextView android:text="Bezahlmodell:" android:id="@+id/priceTextView"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<RadioGroup android:id="@+id/radioGroupPurchaseType"
+			android:layout_width="wrap_content" android:layout_height="wrap_content">
+			<RadioButton android:layout_width="wrap_content"
+				android:id="@+id/radioRent" android:layout_height="wrap_content"
+				android:text="Mieten" android:checked="true"></RadioButton>
+			<RadioButton android:layout_width="wrap_content"
+				android:id="@+id/radioBuy" android:layout_height="wrap_content"
+				android:text="Kaufen"></RadioButton>
+		</RadioGroup>
+		<TextView android:text="Preis in €: Min - Max" android:id="@+id/priceTextView"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/linearLayout1">
+			<EditText android:id="@+id/priceMin" android:layout_height="wrap_content"
+				android:text="100" android:layout_width="wrap_content"
+				android:layout_weight="0.5" android:hint="Preis Min in €"
+				android:inputType="number" android:imeOptions="actionDone"></EditText>
+			<EditText android:id="@+id/priceMax" android:layout_width="wrap_content"
+				android:text="1000000" android:layout_height="wrap_content"
+				android:layout_weight="0.5" android:hint="Preis Max in €"
+				android:inputType="number" android:imeOptions="actionDone"></EditText>
+		</LinearLayout>
+		<TextView android:text="Zimmer: Min - Max" android:id="@+id/roomsTextView"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/linearLayout2">
+			<EditText android:id="@+id/roomsMin" android:layout_height="wrap_content"
+				android:text="1" android:layout_width="wrap_content"
+				android:layout_weight="0.5" android:hint="Zimmer Min"
+				android:inputType="number" android:imeOptions="actionDone"></EditText>
+			<EditText android:id="@+id/roomsMax" android:layout_weight="0.5"
+				android:text="10" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:hint="Zimmer Max"
+				android:inputType="number" android:imeOptions="actionDone"></EditText>
+		</LinearLayout>
+		<TextView android:text="Fläche in m²: Min - Max" android:id="@+id/areaTextView"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/linearLayout3">
+			<EditText android:id="@+id/areaMin" android:layout_height="wrap_content"
+				android:text="10" android:layout_width="wrap_content"
+				android:layout_weight="0.5" android:hint="Fläche Min in m²"
+				android:inputType="number" android:imeOptions="actionDone"></EditText>
+			<EditText android:id="@+id/areaMax" android:layout_weight="0.5"
+				android:text="1000" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:hint="Fläche Max in m²"
+				android:inputType="number" android:imeOptions="actionDone"></EditText>
+		</LinearLayout>
+		<Button android:text="Suchen" android:id="@+id/search"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"></Button>
+	</LinearLayout>
+</ScrollView>

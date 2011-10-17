@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="url_search_service_dev">http://sandbox.immobilienscout24.de/restapi/api/search/v1.0/</string>
+    <string name="url_search_service_live">http://rest.immobilienscout24.de/restapi/api/search/v1.0/</string>
+</resources>

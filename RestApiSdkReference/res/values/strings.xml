@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, RestApiSdkReferenceActivity!</string>
+    <string name="app_name">RestApiSdkReference</string>
+    <string name="activity_search_label">Suche</string>
+    <string name="activity_result_list_label">Ergebnisliste</string>
+    <string name="activity_expose_label">Expose</string>
+</resources>
