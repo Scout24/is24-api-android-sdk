@@ -44,5 +44,9 @@ The SDK Test
 
 To verify that the SDK is working and that changes didn't break the functionality a SDK test project is provided. This test project can't test the SDK library directly as no APK is generated from it. It tests SDK classes through the reference project.  
 
- 
-  
+-------------------------
+The ImmobilienScout24 Android SDK is Free Software and Open Source.
+
+The ImmobilienScout24 Android SDK is licensed under the LGPL v2.1 (http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html). The LGPL is flexible enough to allow the use of the ImmobilienScout24 Android SDK in both open source and commercial projects.
+
+If you modify the ImmobilienScout24 Android SDK itself and redistribute your modifications, the LGPL applies. Please consider pushing any modifications or enhancements to the original master branch so that others can benefit from it.
