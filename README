@@ -49,4 +49,4 @@ The ImmobilienScout24 Android SDK is Free Software and Open Source.
 
 The ImmobilienScout24 Android SDK is licensed under the LGPL v2.1 (http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html). The LGPL is flexible enough to allow the use of the ImmobilienScout24 Android SDK in both open source and commercial projects.
 
-If you modify the ImmobilienScout24 Android SDK itself and redistribute your modifications, the LGPL applies. Please consider pushing any modifications or enhancements to the original master branch so that others can benefit from it.
+If you modify the ImmobilienScout24 Android SDK itself and redistribute your modifications, the LGPL applies. Please consider providing a patch which can be integrated into the master branch if you are doing any modifications or enhancements so that others can benefit from it.
