@@ -39,7 +39,7 @@ public class HttpRequestExecuter implements RequestExecuter {
   }
 
   public void init2LeggedOauth(String consumerKey, String consumerSecret, boolean isLiveUrl) {
-    isLiveUrl = true;
+    this.isLiveUrl = isLiveUrl;
     consumer2Legged = new DefaultOAuthConsumer(consumerKey, consumerSecret);
   }
 
