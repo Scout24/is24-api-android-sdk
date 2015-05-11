@@ -1,4 +1,4 @@
-This project is an **Android Development Kit** for accessing the [ImmobilienScout24 REST API](http://developerwiki.immobilienscout24.de/wiki/ImmobilienScout24_API).
+This project is an **Android Development Kit** for accessing the [ImmobilienScout24 REST API](http://api.immobilienscout24.de/).
 
 The purpose of this project is to enable Android developers to easily use the ImmobilienScout24 REST API **without having to care about the specifics of OAuth or how to structure requests against the API**.
 
@@ -30,7 +30,7 @@ First you'll have to provide the `ApplicationContext` to the `LibraryContext` cl
 
 `LibraryContext.getInstance().initApplicationContext(getApplicationContext());`
 
-The next thing you'll have to do is to initialize the `HttpRequestExecuter` with your **consumer-key and your consumer-secret** which you received when you [registered for using the ImmobilienScout24 REST API](http://developer.immobilienscout24.de/rest-api/rest-api-zugang). It is responsible for signing the requests which are directed to the API with your OAuth credentials. The `init2LeggedOauth` method also takes a flag specifying whether the requests should be fired *against the sandbox or the live system*.
+The next thing you'll have to do is to initialize the `HttpRequestExecuter` with your **consumer-key and your consumer-secret** which you received when you [registered for using the ImmobilienScout24 REST API](http://api.immobilienscout24.de/get-started.html). It is responsible for signing the requests which are directed to the API with your OAuth credentials. The `init2LeggedOauth` method also takes a flag specifying whether the requests should be fired *against the sandbox or the live system*.
  
 `HttpRequestExecuter.getInstance().init2LeggedOauth(consumer-key, consumer-secret, isLiveUrl);`
       
